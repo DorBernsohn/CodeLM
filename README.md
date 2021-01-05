@@ -1,6 +1,15 @@
 # SQLM
 An SQL Language Model {SQL -> en, en -> SQL}
 
-## Example:
-+ **Text**:  `SELECT dress FROM cloths where dress_size > 10 AND dress_color='red' order by date`
-+ **Description prediction**:  What is the dress of the gown with a dress size larger than 10 and a dress_color='red' order by date?
+## Example {SQL -> en}:
++ **SQL**:  `SELECT Teams FROM table WHERE League = bundesliga AND Away = 3-2`
++ **Description prediction**:  Which teams have a League of bundesliga, and an Away of 3-2?
+
+## Example {en -> SQL}:
++ **Text**:  
++ **SQL prediction**:  
+
+## Requirments:
++ pytorch_lightning==0.9
++ transformers
++ rouge_score
