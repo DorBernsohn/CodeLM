@@ -1,12 +1,13 @@
 from nlp import load_dataset
+from transformers import T5Tokenizer
 from torch.utils.data import Dataset
 
 class wikisql(Dataset):
-    def __init__(self, tokenizer, 
-                       type_path: str, 
-                       num_samples: int,
+    def __init__(self, type_path: str, 
                        input_length: int, 
-                       output_length: int, 
+                       output_length: int,
+                       num_samples: int = None,
+                       tokenizer = T5Tokenizer.from_pretrained('t5-small'), 
                        sql2txt: bool = True) -> None:      
 
         self.dataset =  load_dataset('wikisql', 'all', data_dir='data/', split=type_path)
@@ -25,13 +26,14 @@ class wikisql(Dataset):
 
     
     def convert_to_features(self, example_batch):                
-        # text to sql
         if self.sql2txt:
-            input_ = self.clean_text(example_batch['question'])
-            target_ = self.clean_text(example_batch['sql']['human_readable'])
-        else: # sql to text 
+            # sql to text
             input_ = self.clean_text(example_batch['sql']['human_readable'])
             target_ = self.clean_text(example_batch['question'])
+        else: 
+            # text to sql
+            input_ = self.clean_text(example_batch['question'])
+            target_ = self.clean_text(example_batch['sql']['human_readable'])
         
         source = self.tokenizer.batch_encode_plus([input_], max_length=self.input_length, 
                                                      padding='max_length', truncation=True, return_tensors="pt")
@@ -55,5 +57,7 @@ class wikisql(Dataset):
 
 
 def get_dataset(tokenizer, type_path: str, num_samples: int, args) -> wikisql:
-      return wikisql(tokenizer=tokenizer, type_path=type_path, num_samples=num_samples,  input_length=args.max_input_length, 
-                        output_length=args.max_output_length)
+      return wikisql(type_path=type_path, 
+                    num_samples=num_samples,  
+                    input_length=args.max_input_length, 
+                    output_length=args.max_output_length)
