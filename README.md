@@ -2,8 +2,11 @@
 An SQL Language Model {SQL -> en, en -> SQL}
 
 ## Example {SQL -> en}:
-+ **SQL**:  `SELECT Teams FROM table WHERE League = bundesliga AND Away = 3-2`
-+ **Description prediction**:  Which teams have a League of bundesliga, and an Away of 3-2?
++ **SQL**:  `translate English to SQL: SELECT people FROM peoples where age > 10`
++ **Description prediction**:  What people are older than 10?
+
++ **SQL**:  `translate English to SQL: SELECT COUNT Params from model where location=HF-Hub`
++ **Description prediction**:  How many params from model location is hf-hub?
 
 ## Example {en -> SQL}:
 + **Text**:  
