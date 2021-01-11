@@ -28,11 +28,11 @@ class wikisql(Dataset):
     def convert_to_features(self, example_batch):                
         if self.sql2txt:
             # sql to text
-            input_ = self.clean_text(example_batch['sql']['human_readable'])
+            input_ = "translate SQL to English: " + self.clean_text(example_batch['sql']['human_readable'])
             target_ = self.clean_text(example_batch['question'])
         else: 
             # text to sql
-            input_ = self.clean_text(example_batch['question'])
+            input_ = "translate English to SQL: " + self.clean_text(example_batch['question'])
             target_ = self.clean_text(example_batch['sql']['human_readable'])
         
         source = self.tokenizer.batch_encode_plus([input_], max_length=self.input_length, 
