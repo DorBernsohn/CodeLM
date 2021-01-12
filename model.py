@@ -15,12 +15,13 @@ from transformers import (
 )
 
 class T5FineTuner(pl.LightningModule):
-    def __init__(self, hparams):
+    def __init__(self, hparams, sql2txt: bool = True) -> None:
         super(T5FineTuner, self).__init__()
         self.hparams = hparams        
         self.model = T5ForConditionalGeneration.from_pretrained(hparams.model_name)
         self.tokenizer = T5Tokenizer.from_pretrained(hparams.tokenizer_name)
         self.rouge_metric = load_metric('rouge')
+        self.sql2txt = sql2txt
         
         if self.hparams.freeze_embeds:
             self.freeze_embeds()
@@ -204,7 +205,7 @@ class T5FineTuner(pl.LightningModule):
 
     def train_dataloader(self):   
         n_samples = self.n_obs['train']
-        train_dataset = get_dataset(tokenizer=self.tokenizer, type_path="train", num_samples=n_samples, args=self.hparams)
+        train_dataset = get_dataset(tokenizer=self.tokenizer, type_path="train", num_samples=n_samples, args=self.hparams, sql2txt=self.sql2txt)
         dataloader = DataLoader(train_dataset, batch_size=self.hparams.train_batch_size, drop_last=True, shuffle=True, num_workers=4)
         t_total = (
             (len(dataloader.dataset) // (self.hparams.train_batch_size * max(1, self.hparams.n_gpu)))
@@ -219,7 +220,7 @@ class T5FineTuner(pl.LightningModule):
 
     def val_dataloader(self):
         n_samples = self.n_obs['validation']
-        validation_dataset = get_dataset(tokenizer=self.tokenizer, type_path="validation", num_samples=n_samples, args=self.hparams)
+        validation_dataset = get_dataset(tokenizer=self.tokenizer, type_path="validation", num_samples=n_samples, args=self.hparams, sql2txt=self.sql2txt)
         
         return DataLoader(validation_dataset, batch_size=self.hparams.eval_batch_size, num_workers=4)
     
