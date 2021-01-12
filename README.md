@@ -1,5 +1,6 @@
 # SQLM
 An SQL Language Model {SQL -> en, en -> SQL}
+Based on wikisql dataset
 
 ## Example {SQL -> en}:
 + **SQL**:  `translate SQL to English: SELECT people FROM peoples where age > 10`
@@ -17,7 +18,6 @@ An SQL Language Model {SQL -> en, en -> SQL}
 + transformers
 + rouge_score
 
-## HuggingFace models URL:
-
+## HuggingFace models URLs:
 + https://huggingface.co/dbernsohn/t5_wikisql_SQL2en
 + https://huggingface.co/dbernsohn/t5_wikisql_en2SQL
