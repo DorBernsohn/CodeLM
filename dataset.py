@@ -56,8 +56,9 @@ class wikisql(Dataset):
         return {"source_ids": source_ids, "source_mask": src_mask, "target_ids": target_ids, "target_mask": target_mask}
 
 
-def get_dataset(tokenizer, type_path: str, num_samples: int, args) -> wikisql:
+def get_dataset(tokenizer, type_path: str, num_samples: int, args, sql2txt) -> wikisql:
       return wikisql(type_path=type_path, 
                     num_samples=num_samples,  
                     input_length=args.max_input_length, 
-                    output_length=args.max_output_length)
+                    output_length=args.max_output_length,
+                    sql2txt=sql2txt)
