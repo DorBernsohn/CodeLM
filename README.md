@@ -9,10 +9,15 @@ An SQL Language Model {SQL -> en, en -> SQL}
 + **Description prediction**:  How many params from model location is hf-hub?
 
 ## Example {en -> SQL}:
-+ **Text**:  
-+ **SQL prediction**:  
++ **Text**: `what are the names of all the people in the USA?` 
++ **SQL prediction**: `SELECT Name FROM table WHERE Country = USA`
 
 ## Requirments:
 + pytorch_lightning==0.9
 + transformers
 + rouge_score
+
+## HuggingFace models URL:
+
++ https://huggingface.co/dbernsohn/t5_wikisql_SQL2en
++ https://huggingface.co/dbernsohn/t5_wikisql_en2SQL
