@@ -11,10 +11,9 @@ for k, v in my_dict.items():
 ```
 + **Prediction**:  
 
-<object data="roberta-python-loss.pdf" type="application/pdf" width="700px" height="700px">
-    <embed src="roberta-python-loss.pdf">
-        <p>Loss: <a href="roberta-python-loss.pdf">Download PDF</a>.</p>
-    </embed>
+<object data="roberta-python-loss.pdf" type="application/pdf" width="100%"></object>
+
+<object data="/blog/images/xxx.pdf" type="application/pdf" width="100%"> 
 </object>
 
 ## Example {Java}:
