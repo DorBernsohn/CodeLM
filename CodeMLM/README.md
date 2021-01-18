@@ -4,16 +4,23 @@ Based on CodeSearchNet dataset
 
 ## Example {Python}:
 + **Code**:  
-```def fib(n):     
-    a, b = 0, 1     
-    while a < n:         
-        print(a, end=' ')         
-        a, b = b, a+b
+```
+new_dict = {}
+for k, v in my_dict.items():
+    new_dict[k] = v**2
 ```
 + **Prediction**:  
 
+<object data="roberta-python-loss.pdf" type="application/pdf" width="700px" height="700px">
+    <embed src="roberta-python-loss.pdf">
+        <p>Loss: <a href="roberta-python-loss.pdf">Download PDF</a>.</p>
+    </embed>
+</object>
+
 ## Example {Java}:
-+ **Code**:  
++ **Code**:
+```
+```
 + **Prediction**:  
 
 ## Example {go}:
@@ -21,7 +28,9 @@ Based on CodeSearchNet dataset
 + **Prediction**:  
 
 ## Example {php}:
-+ **Code**:  
++ **Code**:
+```
+```
 + **Prediction**:  
 
 ## Example {javascript}:
@@ -36,5 +45,5 @@ Based on CodeSearchNet dataset
 + transformers
 
 ## HuggingFace models URLs:
-+ ..
++ https://huggingface.co/dbernsohn/roberta-python
 + ..
