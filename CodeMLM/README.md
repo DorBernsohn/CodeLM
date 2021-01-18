@@ -11,10 +11,7 @@ for k, v in my_dict.items():
 ```
 + **Prediction**:  
 
-<object data="roberta-python-loss.pdf" type="application/pdf" width="100%"></object>
-
-<object data="/blog/images/xxx.pdf" type="application/pdf" width="100%"> 
-</object>
+![roberta python loss](roberta-python-loss.pdf "roberta python loss")
 
 ## Example {Java}:
 + **Code**:
