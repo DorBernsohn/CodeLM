@@ -6,7 +6,7 @@ Based on CodeSearchNet dataset
 + **Code**:  
 ```python
 new_dict = {}
-for k, v in my_dict.items():
+for k, v in my_dict.<mask>():
     new_dict[k] = v**2
 ```
 + **Prediction**:  
@@ -21,26 +21,32 @@ for k, v in my_dict.items():
 
 ## Example {Java}:
 + **Code**:
-```
+```java
 ```
 + **Prediction**:  
 
 ## Example {go}:
-+ **Code**:  
++ **Code**:
+```go
+```
 + **Prediction**:  
 
 ## Example {php}:
 + **Code**:
-```
+```php
 ```
 + **Prediction**:  
 
 ## Example {javascript}:
-+ **Code**:  
++ **Code**:
+```javascript
+```
 + **Prediction**: 
 
 ## Example {ruby}:
-+ **Code**:  
++ **Code**:
+```ruby
+```
 + **Prediction**: 
 
 ## Requirments:
