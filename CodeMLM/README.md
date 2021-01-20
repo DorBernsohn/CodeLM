@@ -95,9 +95,21 @@ Based on CodeSearchNet dataset
     ```
 ## Example {javascript}:
 + **Code**:
-```javascript
-```
-+ **Prediction**: 
+    ```javascript
+    var i;
+    for (i = 0; i < cars.<mask>; i++) {
+    text += cars[i] + "<br>";
+    }
+    ```
++ **Prediction**:
+    ```
+    [('length', 0.9959614872932434),
+    ('i', 0.00027875584783032537),
+    ('len', 0.0002283261710545048),
+    ('nodeType', 0.00013731322542298585),
+    ('index', 7.5289819505997e-05)]
+    ```
+![roberta javascript loss](roberta-javascript-loss.pdf "roberta javascript loss")
 
 ## Example {ruby}:
 + **Code**:
@@ -113,3 +125,4 @@ Based on CodeSearchNet dataset
 + https://huggingface.co/dbernsohn/roberta-java
 + https://huggingface.co/dbernsohn/roberta-go
 + https://huggingface.co/dbernsohn/roberta-php
++ https://huggingface.co/dbernsohn/roberta-javascript
