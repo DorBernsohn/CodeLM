@@ -2,6 +2,8 @@
 A Roberta Language Model {MLM - Masked Language Model}
 Based on CodeSearchNet dataset
 
+To run the experimnt go to the notebook CodeMLM\TrainCodeRoBERTa.ipynb.
+
 ## Example {Python}:
 + **Code**:  
     ```python
