@@ -111,12 +111,6 @@ Based on CodeSearchNet dataset
     ```
 ![roberta javascript loss](roberta-javascript-loss.pdf "roberta javascript loss")
 
-## Example {ruby}:
-+ **Code**:
-```ruby
-```
-+ **Prediction**: 
-
 ## Requirments:
 + transformers
 
