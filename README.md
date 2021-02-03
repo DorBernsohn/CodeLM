@@ -7,6 +7,8 @@ A repo for code based language models:
 + roberta-go
 + roberta-php
 + roberta-javascript
++ algebra_linear_1d
++ algebra_linear_1d_composed
 
 ## HuggingFace models URLs:
 + https://huggingface.co/dbernsohn/t5_wikisql_SQL2en
@@ -16,3 +18,5 @@ A repo for code based language models:
 + https://huggingface.co/dbernsohn/roberta-go
 + https://huggingface.co/dbernsohn/roberta-php
 + https://huggingface.co/dbernsohn/roberta-javascript
++ https://huggingface.co/dbernsohn/algebra_linear_1d
++ https://huggingface.co/dbernsohn/algebra_linear_1d_composed
