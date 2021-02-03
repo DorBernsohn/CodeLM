@@ -1,5 +1,5 @@
-# CodeMLM
-An T5 Language Model {math question -> answer}
+# MathLM
+A T5 Language Model {math question -> answer}
 Based on [mathematics_dataset](https://github.com/deepmind/mathematics_dataset dataset)
 
 To run the experimnt go to the notebook MathLM\run_Text_to_Text_on_math_data.ipynb
