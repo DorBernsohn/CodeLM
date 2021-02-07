@@ -5,7 +5,7 @@ Based on [mathematics_dataset](https://github.com/deepmind/mathematics_dataset)
 To run the experimnt go to the notebook MathLM\run_Text_to_Text_on_math_data.ipynb
 
 ## Example:
-+ Suppose -d = 5 - 16. Let b = -579 + 584. Solve -b*c + 36 = d for c.
++ `Suppose -d = 5 - 16. Let b = -579 + 584. Solve -b*c + 36 = d for c.`
 + Answer: 5 Pred: 5
 ----
 + Suppose 3v - l + 9 = 4v, 0 = -5v + 5l - 5. Let f(s) = 3s**2 + 1. Let g be f(-1). Suppose 63 = gx - x. Solve -5*i + v + x = 0 for i.
