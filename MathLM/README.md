@@ -40,6 +40,14 @@ To run the experimnt go to the notebook MathLM\run_Text_to_Text_on_math_data.ipy
 + `Suppose 31 = -4z + 11, -3k - 5z - 22 = 0. Solve 23 = -11p + k for p.`
 + **Answer**: -2 
 + **Pred**: -2
+----
++ `Calculate the greatest common factor of 3470 and 97090.`
++ **Answer**: 10 
++ **Pred**: 10
+----
++ `Calculate the highest common factor of 3480 and 775431.`
++ **Answer**: 87 
++ **Pred**: 87
 
 
 ## Requirments:
@@ -48,3 +56,4 @@ To run the experimnt go to the notebook MathLM\run_Text_to_Text_on_math_data.ipy
 ## HuggingFace models URLs:
 + https://huggingface.co/dbernsohn/algebra_linear_1d
 + https://huggingface.co/dbernsohn/algebra_linear_1d_composed
++ https://huggingface.co/dbernsohn/t5_numbers_gcd
