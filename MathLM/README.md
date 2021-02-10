@@ -48,6 +48,14 @@ To run the experimnt go to the notebook MathLM\run_Text_to_Text_on_math_data.ipy
 + `Calculate the highest common factor of 3480 and 775431.`
 + **Answer**: 87 
 + **Pred**: 87
+----
++ `How many minutes are there between 2:09 PM and 2:27 PM?`
++ **Answer**:  18 
++ **Pred**:  18
+----
++ `What is 116 minutes after 10:06 AM?`
++ **Answer**:  12:02 PM 
++ **Pred**:  12:02 PM
 
 
 ## Requirments:
@@ -57,3 +65,4 @@ To run the experimnt go to the notebook MathLM\run_Text_to_Text_on_math_data.ipy
 + https://huggingface.co/dbernsohn/algebra_linear_1d
 + https://huggingface.co/dbernsohn/algebra_linear_1d_composed
 + https://huggingface.co/dbernsohn/t5_numbers_gcd
++ https://huggingface.co/dbernsohn/t5_measurement_time
